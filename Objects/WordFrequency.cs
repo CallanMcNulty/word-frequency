@@ -4,11 +4,16 @@ namespace WordFrequency
   {
     public static int CountRepeats(string searchTerm, string searchedString)
     {
-      if(searchTerm==searchedString)
+      int count = 0;
+      for(int i=0; i<searchedString.Length; i++)
       {
-        return 1;
+        string chunk = searchedString.Substring(i,1);
+        if(searchTerm==chunk)
+        {
+          count ++;
+        }
       }
-      return 0;
+      return count;
     }
   }
 }
