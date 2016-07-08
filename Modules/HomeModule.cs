@@ -7,8 +7,13 @@ namespace WordFrequency
   {
     public HomeModule()
     {
-      Get["/"] = _ => {
-        return View["index.cshtml"];
+      Get["/"] = _ => View["index.cshtml"];
+      Post["/result"] = _ => {
+        string searchTerm = Request.Form["searchTerm"];
+        string sentence = Request.Form["sentence"];
+        int count = RepeatCounter.CountRepeats(searchTerm, sentence);
+        string[] info = {searchTerm, sentence, count.ToString()};
+        return View["result.cshtml", info];
       };
     }
   }
