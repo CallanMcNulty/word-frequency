@@ -56,18 +56,9 @@ Fulfill all previous specs even when the search term contains non-alphabetic cha
   Example Output: 1
   In this example "that's" is a full word containing punctuation which appears once in the searched string as a full word.
 
-Given a search term containing multiple words, search for only the first word, fulfilling all previous specs.
+Given a search term containing multiple words, search for the full multi-word string, fulfilling all previous specs.
   Example Input:
-    Search Term: "that's it"
-    String: "That's what I am."
+    Search Term: "am what"
+    String: "I am what I am."
   Example Output: 1
-In this example "that's" appears once in the searched string as a full word and "it" does not appear.
-
------Extra Functionality If Time Permits------
-
-Instead of fulfilling the last spec listed above, given a search term containing multiple words, search for each word, fulfilling all previous specs, and return the count of each one.
-  Example Input:
-    Search Term: "that's it"
-    String: "That's what it is."
-  Example Output: "that's" 1, "it" 1
-In this example "that's" appears once in the searched string as a full word and "it" appears once in the searched string as a full word.
+In this example "am what" appears once as a single string in the searched string, and "am" appears once on it's own.

@@ -103,5 +103,15 @@ namespace WordFrequency
       //Assert
       Assert.Equal(expected, repeatNumber);
     }
+
+    [Fact]
+    public void CountRepeats__amwhat_IamwhatIam__1()
+    {
+      //Arrange/Act
+      int repeatNumber = RepeatCounter.CountRepeats("am what","I am what I am.");
+      int expected = 1;
+      //Assert
+      Assert.Equal(expected, repeatNumber);
+    }
   }
 }
