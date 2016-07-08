@@ -1,7 +1,10 @@
-namespace weekdayFinder
+namespace WordFrequency
 {
-  public class Finder
+  public static class RepeatCounter
   {
-    //Object goes here
+    public static int CountRepeats(string searchTerm, string searchedString)
+    {
+      return 0;
+    }
   }
 }
