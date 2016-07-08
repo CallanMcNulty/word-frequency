@@ -7,6 +7,8 @@ namespace WordFrequency
     private static char[] wordChars = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     public static int CountRepeats(string searchTerm, string searchedString)
     {
+      searchTerm = searchTerm.ToLower();
+      searchedString = searchedString.ToLower();
       int count = 0;
       int termLength = searchTerm.Length;
       for(int i=0; i<searchedString.Length-termLength+1; i++)

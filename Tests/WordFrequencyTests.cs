@@ -58,7 +58,7 @@ namespace WordFrequency
     public void CountRepeats__am_Iamaprogrammer__1()
     {
       //Arrange/Act
-      int repeatNumber = RepeatCounter.CountRepeats("a","I am a programmer.");
+      int repeatNumber = RepeatCounter.CountRepeats("am","I am a programmer.");
       int expected = 1;
       //Assert
       Assert.Equal(expected, repeatNumber);
@@ -70,6 +70,26 @@ namespace WordFrequency
       //Arrange/Act
       int repeatNumber = RepeatCounter.CountRepeats("programmer","I");
       int expected = 0;
+      //Assert
+      Assert.Equal(expected, repeatNumber);
+    }
+
+    [Fact]
+    public void CountRepeats__am_thisiswhatIamCOLONaprogrammer__1()
+    {
+      //Arrange/Act
+      int repeatNumber = RepeatCounter.CountRepeats("am","This is what I am: a programmer.");
+      int expected = 1;
+      //Assert
+      Assert.Equal(expected, repeatNumber);
+    }
+
+    [Fact]
+    public void CountRepeats__am_AmIaprogrammer__1()
+    {
+      //Arrange/Act
+      int repeatNumber = RepeatCounter.CountRepeats("am","Am I a programmer?");
+      int expected = 1;
       //Assert
       Assert.Equal(expected, repeatNumber);
     }
