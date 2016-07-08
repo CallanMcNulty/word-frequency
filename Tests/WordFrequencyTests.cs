@@ -33,5 +33,15 @@ namespace WordFrequency
       //Assert
       Assert.Equal(expected, repeatNumber);
     }
+
+    [Fact]
+    public void CountRepeats__a_Iamahotdog__1()
+    {
+      //Arrange/Act
+      int repeatNumber = RepeatCounter.CountRepeats("a","I am a hot dog.");
+      int expected = 1;
+      //Assert
+      Assert.Equal(expected, repeatNumber);
+    }
   }
 }
