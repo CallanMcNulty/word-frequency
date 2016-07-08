@@ -1,0 +1,73 @@
+-----SPECS-----
+
+Given a search term that does not appear in the searched string, return 0.
+  Example Input:
+    Search Term: "a"
+    String: "I"
+  Example Output: 0
+  In this example "a" is a word that does not appear in part or in whole in any form in the searched string.
+
+Given a search term that is equivalent to the searched string, return 1.
+  Example Input:
+    Search Term: "I"
+    String: "I"
+  Example Output: 1
+  In this example the search term and string are both the single character "I".
+
+Given a one character search term that appears in but is not equivalent to the searched string and appears only as a full word, return the number of appearances.
+  Example Input:
+    Search Term: "a"
+    String: "I would like a hot dog."
+  Example Output: 1
+  In this example "a" appears once in the searched string as a full word but never as a substring of another word.
+
+Given a one character search term that appears in the searched string multiple times, both as a full word and as part of another word, return only the number of appearances as a full word.
+  Example Input:
+    Search Term: "a"
+    String: "I am a hot dog."
+  Example Output: 1
+  In this example "a" appears once in the searched string as a full word and once as a substring of another word.
+
+Given a multiple character search term that appears in the searched string multiple times, both as a full word and as part of another word, return only the number of appearances as a full word.
+  Example Input:
+    Search Term: "am"
+    String: "I am a programmer."
+  Example Output: 1
+  In this example "am" is a multiple character word which appears once in the searched string as a full word and once as a substring of another word.
+
+Fulfill the previous spec even when words in the searched string are separated by non-whitespace characters.
+  Example Input:
+    Search Term: "am"
+    String: "This is what I am: a programmer."
+  Example Output: 1
+  In this example "am" appears once in the searched string as a full word followed by punctuation and once as a substring of another word.
+
+Fulfill all previous specs even when the case of the search term is not the same as the case of the matching word in the searched string.
+  Example Input:
+    Search Term: "am"
+    String: "Am I a programmer?"
+  Example Output: 1
+  In this example "am" appears once in the searched string as a full word with differing case and once as a substring of another word.
+
+Fulfill all previous specs even when the search term contains non-alphabetic chracters.
+  Example Input:
+    Search Term: "that's"
+    String: "That's what I am."
+  Example Output: 1
+  In this example "that's" is a full word containing punctuation which appears once in the searched string as a full word.
+
+Given a search term containing multiple words, search for only the first word, fulfilling all previous specs.
+  Example Input:
+    Search Term: "that's it"
+    String: "That's what I am."
+  Example Output: 1
+In this example "that's" appears once in the searched string as a full word and "it" does not appear.
+
+-----Extra Functionality If Time Permits------
+
+Instead of fulfilling the last spec listed above, given a search term containing multiple words, search for each word, fulfilling all previous specs, and return the count of each one.
+  Example Input:
+    Search Term: "that's it"
+    String: "That's what it is."
+  Example Output: "that's" 1, "it" 1
+In this example "that's" appears once in the searched string as a full word and "it" appears once in the searched string as a full word.
