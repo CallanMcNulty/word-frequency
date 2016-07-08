@@ -93,5 +93,15 @@ namespace WordFrequency
       //Assert
       Assert.Equal(expected, repeatNumber);
     }
+
+    [Fact]
+    public void CountRepeats__thatAPOSTROPHEs_thatAPOSTROPHEswhatIam__1()
+    {
+      //Arrange/Act
+      int repeatNumber = RepeatCounter.CountRepeats("that's","That's what I am.");
+      int expected = 1;
+      //Assert
+      Assert.Equal(expected, repeatNumber);
+    }
   }
 }

@@ -49,7 +49,7 @@ Fulfill all previous specs even when the case of the search term is not the same
   Example Output: 1
   In this example "am" appears once in the searched string as a full word with differing case and once as a substring of another word.
 
-Fulfill all previous specs even when the search term contains non-alphabetic chracters.
+Fulfill all previous specs even when the search term contains non-alphabetic characters.
   Example Input:
     Search Term: "that's"
     String: "That's what I am."
